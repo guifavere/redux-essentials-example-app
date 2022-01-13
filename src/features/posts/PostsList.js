@@ -2,9 +2,8 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { useGetPostsQuery } from '../api/apiSlice';
-
 import { Spinner } from '../../components/Spinner';
+import { useGetPostsQuery } from '../api/apiSlice';
 import { PostAuthor } from './PostAuthor';
 import { ReactionButtons } from './ReactionButtons';
 import { TimeAgo } from './TimeAgo';
@@ -34,7 +33,6 @@ export const PostsList = () => {
     isSuccess,
     isError,
     error,
-    refetch,
   } = useGetPostsQuery();
 
   const sortedPosts = useMemo(() => {
@@ -66,7 +64,6 @@ export const PostsList = () => {
   return (
     <section className="posts-list">
       <h2>Posts</h2>
-      <button onClick={refetch}>Refetch posts</button>
       {content}
     </section>
   );
