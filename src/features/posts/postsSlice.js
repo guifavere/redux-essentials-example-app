@@ -73,7 +73,7 @@ const postsSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(addNewPost.fulfilled, postsAdapter.upsertOne)
+      .addCase(addNewPost.fulfilled, postsAdapter.addOne)
       .addCase(fetchPosts.pending, (state, action) => {
         state.status = 'loading';
       })

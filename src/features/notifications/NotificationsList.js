@@ -26,7 +26,7 @@ export const NotificationsList = () => {
     });
 
     return (
-      <div key={notifications.id} className={notificationClassName}>
+      <div key={notification.id} className={notificationClassName}>
         <div>
           <b>{user.name}</b> {notification.message}
         </div>

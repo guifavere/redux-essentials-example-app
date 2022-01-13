@@ -9,8 +9,6 @@ import { fetchUsers } from './features/users/usersSlice';
 
 import { worker } from './api/server'
 
-store.dispatch(fetchUsers());
-
 // Wrap app rendering so we can wait for the mock API to initialize
 async function start() {
   // Start our mock API server
@@ -27,3 +25,5 @@ async function start() {
 }
 
 start()
+
+store.dispatch(fetchUsers());
